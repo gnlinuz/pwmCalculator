@@ -4,5 +4,26 @@
     PR2 register, PWM resolution by spliting the 10bit resolution
     to the 2 lsb bits going on CCP1CON<DC1B1:DC1B0> register
     and the rest 8 msb bits on CCPR1L.
+    Formulas that have been used:
+              1
+    TOSC = -------
+            FOSC
+
+    PWM period =[(PR2+1)] * 4 * TOSC (TMR2 prescaler value)
+   
+                 log[4(PR2 + 1)]
+    Resolution = --------------
+                     log(2) 
+    
+            (PWM period)
+    PR2  = -----------------
+          (4* TOSC * TMR2)-1
+
+                   (FOSC)
+    PR2 = ------------------------
+           (4* TMR2 * PWM Freq)-1
+
+    CCPRL1_CCP1CON = (4*(PR2+1)*(duty_cycle/100.0))
+
     This is for a small range of PIC's family. Tested on 12F615/617
     enjoy!
