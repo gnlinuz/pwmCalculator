@@ -1,4 +1,4 @@
-This is python program so to execute it just run python pwmcalc.py
+This is python program so execute it by runing python pwmcalc.py
 This been gone throught pylint:
 Pylint is a Python static code analysis tool which looks for programming errors,
 helps enforcing a coding standard, sniffs for code smells and offers simple refactoring suggestions.
