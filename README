@@ -1,0 +1,8 @@
+    Microchip 8bit PWM calculator.
+    ------------------------------
+    Use this to calculate 8bit Pic's PWM period, freuency,
+    PR2 register, PWM resolution by spliting the 10bit resolution
+    to the 2 lsb bits going on CCP1CON<DC1B1:DC1B0> register
+    and the rest 8 msb bits on CCPR1L.
+    This is for a small range of PIC's family. Tested on 12F615/617
+    enjoy!
